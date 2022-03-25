@@ -1,9 +1,28 @@
-function getMenu(){
-    return `<nav class="menu">
-        <ul>
-        <li><a class="active"href="#sacola">Sacola</a></li>
-        <li><a href="#pagamento">Pagamento</a></li>
-        <li><a href="#confirmação">Confirmação</a></li>
-        </ul>
-    </nav>`
+function Menu(lista){
+    lista.forEach((pagina)=>{
+        pagina.addEventListener('click', (event) =>{
+    
+            lista.forEach((item) => {
+                if(item.classList.contains('active')){
+                    item.classList.remove('active');
+                }
+            })
+    
+            event.target.classList.add('active');
+    
+            if(event.target.textContent === "Sacola"){
+    
+                document.getElementById("root").innerHTML = Home
+    
+            }else if(event.target.textContent === "Pagamento"){
+    
+                document.getElementById("root").innerHTML = Pagamento
+    
+            }else if(event.target.textContent === "Confirmação"){
+    
+                document.getElementById("root").innerHTML = Confirmacao
+    
+            }
+        })
+    })
 }
