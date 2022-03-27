@@ -1,67 +1,53 @@
-function getHome(){
-    return `<div class="app home">
+function getHome(json) {
 
-        <h2>Produtos</h2>
+  let containerProducts = '';
 
-        <div class="container">
+  json.items.forEach((item) => {
 
-            <div class="produto">
-                <div class="produto-container-1">
-                    Loreal image
-                </div>
-                <div class="produto-container-2">
-                    <div>Produto name</div>
-                    <div>R$ 225,90</div>
-                </div>
-            </div>
+    containerProducts += `<div class="produto">
+        <div class="produto-container-1">
+            <img src=${item.product.imageObjects[0].thumbnail}>
+        </div>
+        <div class="produto-container-2">
+            <div class="product-name">${item.product.name}</div>
+            <div class="price">R$ ${(item.product.priceSpecification.price).toFixed(2)}</div>
+        </div>
+      </div>`
 
-            <div class="produto">
-                <div class="produto-container-1">
-                    Loreal image
-                </div>
-                <div class="produto-container-2">
-                    <div>Produto name</div>
-                    <div>R$ 225,90</div>
-                </div>
-            </div>
-            
-            <div class="produto">
-                <div class="produto-container-1">
-                    Loreal image
-                </div>
-                <div class="produto-container-2">
-                    <div>Produto name</div>
-                    <div>R$ 225,90</div>
-                </div>
-            </div>
+  })
 
+  return `<div class="app home">
+
+      <h2>Produtos</h2>
+
+      <div class="container">
+
+        ${containerProducts}
+
+      </div>
+
+      <div class="container-result">
+        <div>
+            <span>Produtos</span>
+            <span>R$ ${(json.subTotal).toFixed(2)}</span>
         </div>
 
-        <div class="container-result">
-            <div>
-                <span>Produtos</span>
-                <span>R$</span>
-            </div>
-
-            <div>
-                <span>Frete</span>
-                <span>R$</span>
-            </div>
-
-            <div>
-                <span>Desconto</span>
-                <span>R$</span>
-            </div>
-
-            <div>
-                <span><strong>Total</strong></span>
-                <span>R$</span>
-            </div>
-            
-            <button>
-                Seguir para o Pagamento
-            </button>
+        <div>
+            <span>Frete</span>
+            <span>R$ ${(json.shippingTotal).toFixed(2)}</span>
         </div>
+
+        <div class="desconto">
+            <span>Desconto</span>
+            <span>R$ -${(json.discount).toFixed(2)}</span>
+        </div>
+
+        <div class="total">
+            <span><strong>Total</strong></span>
+            <span>R$ ${(json.total).toFixed(2)}</span>
+        </div>
+
+      </div>
 
     </div>`
 }

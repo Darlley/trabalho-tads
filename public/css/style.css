@@ -1,108 +1,163 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: Helvetica, sans-serif;
 }
-body{
-    height:100vh;
-    width: 100%;
-    background-color:#eeeeee;
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #eeeeee;
 }
-.app{
-    max-width: 600px;
-    margin: 1rem auto;
+.app {
+  max-width: 600px;
+  margin: 1.5rem auto;
 }
-.app h2{
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.container{
-    background-color:#fff;
-    width: 100%;
-    box-sizing: border-box;
-    padding: .5rem .5rem .1rem;
-    margin-bottom: 1rem;
+.app h2, label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #999;
 }
 
-.menu{
-    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.193);
-    background: #fff;
-}
-.menu ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menu ul li{
-    list-style: none;
-    height: 50px;
-    width: 100%;
-    max-width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.menu ul li a{
-    color: #aeaeae;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: initial;
-    font-weight: bold;
+.container {
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.5rem 0.1rem;
+  margin: 1rem 0;
 }
 
-.list.active, .list:hover{
-    color: #fd6b00;
-    cursor: pointer;
+.menu {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.193);
+  background: #fff;
+}
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul li {
+  list-style: none;
+  height: 50px;
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu ul li a {
+  color: #aeaeae;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-
-button{
-    margin-top: 1rem;
-    background-color: #fd6b00;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 3px;
-    font-size: 2rem;
+.list.active,
+.list:hover {
+  color: #ff7800;
+  cursor: pointer;
 }
-button:hover{
-    background-color: #ec6301;
-    cursor: pointer;
+
+button {
+  margin-top: 1rem;
+  background-color: #ff7800;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.5rem;
+}
+button:hover {
+  background-color: #ec6301;
+  cursor: pointer;
 }
 
 .container .produto {
-    margin-bottom: .5rem;
-    padding: .5rem;
-    border: 1px solid #ddd;
-    display: flex;
-    height: 80px;
-    padding: 1rem 4rem;
-}
-.produto-container-1{
-    flex: 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.produto-container-2{
-    flex: 7;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  height: max-content;
 }
 
-.container-result{
-    border: 1px solid #ddd;
-    padding: .5rem;
+.produto-container-1 img {
+  height: 80px;
 }
 
-.container-result div{
-    display: flex;
-    justify-content: space-between;
-    
+.product-name {
+  font-size: 1rem;
+}
+.price {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.produto-container-1 {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.produto-container-2 {
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.container-result {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  text-transform: uppercase;
+}
+
+.container-result div {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.desconto span{
+  color: #ff7800;
+  font-size: 1.2rem;
+}
+.total{
+  font-weight: bold;
+}
+
+.inputGroup{
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+}
+.inputGroup input, .inputGroup-2 div input{
+  margin-top: .5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 0px 0px 2px 2px #eee;
+  border-radius: 3px;
+}
+
+.inputGroup-2{
+  display: flex;
+  justify-content: space-between;
+}
+.inputGroup-2 div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem .5rem;
+}
+
+.inputGroup-2 div input{
+  width: 100%;
 }
