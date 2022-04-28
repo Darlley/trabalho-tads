@@ -161,3 +161,24 @@ button:hover {
 .inputGroup-2 div input{
   width: 100%;
 }
+
+.confirmacao-check{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: #ff7800;
+  gap: 1rem;
+}
+.confirmacao-check svg{
+  height: 3rem;
+}
+
+.confirmacao-header{
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.39);
+  border-radius:5px;
+}

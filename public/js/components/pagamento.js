@@ -1,7 +1,3 @@
-
-
-
-
 function getPagamento(json){
 
   return `<div class="app pagamento">
@@ -12,18 +8,18 @@ function getPagamento(json){
 
         <div class="inputGroup">
           <label>Numero do Cartão:</label>
-          <input type="text" placeholder="____.____.____.____">
+          <input type="text" placeholder="____.____.____.____" data-js="card-number">
         </div>
 
         <div class="inputGroup">
-          <label>Numero do titular:</label>
-          <input type="text" placeholder="Como no cartão">
+          <label>Nume do titular:</label>
+          <input type="text" placeholder="Como no cartão" data-js="card-name">
         </div>
 
         <div class="inputGroup-2">
           <div>
             <label>Validade (mês/ano)</label>
-            <input type="date">
+            <input type="date" data-js="card-date">
           </div>
           <div>
             <label>CVV</label>
@@ -33,7 +29,7 @@ function getPagamento(json){
 
       </div>
 
-      <div class="container-result">
+      <div class="container-result container-result-pagamento">
         <div>
             <span>Produtos</span>
             <span>R$ ${(json.subTotal).toFixed(2)}</span>
