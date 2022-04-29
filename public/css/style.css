@@ -64,7 +64,7 @@ button {
   margin-top: 1rem;
   background-color: #ff7800;
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   box-sizing: border-box;
   color: white;
   font-weight: bold;
@@ -181,4 +181,8 @@ button:hover {
   background-color: white;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.39);
   border-radius:5px;
+}
+
+.confirmacao-header{
+  text-transform: uppercase;
 }

@@ -1,4 +1,4 @@
-function getConfirmacao(json, cardNumer, cardName, cardDate){
+function getConfirmacao(json, cardNumber, cardName, cardDate){
 
     let containerProducts = '';
     json.items.forEach((item) => {
@@ -24,7 +24,7 @@ function getConfirmacao(json, cardNumer, cardName, cardDate){
         <div class="confirmacao-header">
 
             <div>
-                <p>${cardNumer}</p>
+                <p>${cardNumber}</p>
                 <p>${cardName}</p>
                 <p>${cardDate}</p>
             </div>
